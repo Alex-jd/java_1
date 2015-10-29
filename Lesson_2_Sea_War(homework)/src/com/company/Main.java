@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static final int small = 7;
-    public static final int medium = 5;
-    public static final int big = 3;
+    public static final int SMALL = 7;
+    public static final int MEDIUM = 5;
+    public static final int BIG = 3;
 
     public static class User {
         private String name;
         private String nikname;
-        
+
 
         User(String name, String nikname) {
             this.name = name;
@@ -26,8 +26,17 @@ public class Main {
 
     public static class Ship {
         private String type;
-        private int x
+        private int x;
+        private int y;
+
+        Ship(String _type, int _x, int _y){
+            this.type = _type;
+            this.x = _x;
+            this.y = _y;
+        }
     }
+
+
 
     public static void main(String[] args) {
 	// write your code here
@@ -49,6 +58,9 @@ public class Main {
 
         //Создаем объект класса User с именем teacher
         User teacher = new User(userName, nikName);
+
+        Ship sh_small = new Ship("small", 10, 10);
+
 
         //Вызываем строку с информацией о пользователе и выводим ее на консоль
         System.out.print(teacher.getInfo());
