@@ -4,10 +4,14 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static final int small = 7;
+    public static final int medium = 5;
+    public static final int big = 3;
+
     public static class User {
         private String name;
         private String nikname;
-        private static final String RACE = "HUNAM";
+        
 
         User(String name, String nikname) {
             this.name = name;
@@ -18,6 +22,11 @@ public class Main {
             String info = "User name: " + name + "\nUser nikname: " + nikname;
             return info;
         }
+    }
+
+    public static class Ship {
+        private String type;
+        private int x
     }
 
     public static void main(String[] args) {
