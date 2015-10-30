@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: Alexeenko_AN
+Main-Class: alexeenko.alexandr.battleShip.Main
+
