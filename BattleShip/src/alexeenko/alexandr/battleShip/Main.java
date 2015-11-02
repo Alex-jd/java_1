@@ -28,6 +28,7 @@ public class Main {
         private String type;
         private int x;
         private int y;
+        
 
 
         Ship(String _type, int _x, int _y){
