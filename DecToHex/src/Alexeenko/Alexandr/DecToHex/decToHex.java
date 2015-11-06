@@ -22,14 +22,14 @@ public class decToHex {
 
         while (number != 0) {
             modNumber = (int) (number % 16);
-            System.out.print("dec " + modNumber + "\n");
+            //System.out.print("dec " + modNumber + "\n");
             temp_hex = getHex.hex(modNumber);
             if (hex == null) {
                 hex = temp_hex;
             } else {
                 hex = temp_hex + hex;
             }
-            System.out.print("hex " + temp_hex + "\n");
+            //System.out.print("hex " + temp_hex + "\n");
 
             number = number / 16;
         }
