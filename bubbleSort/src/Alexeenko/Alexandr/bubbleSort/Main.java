@@ -6,20 +6,30 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        String[] test_hex;
+        int str;
 
-        test_hex = new String [] {"54", "58", "98", "2"};
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите количество элементов одномерного массива: ");
+        str = in.nextInt();
+        //String[] test_hex[str];
 
-        for (int i = 0; i < test_hex.length - 1; i++) {
-            System.out.print(test_hex[i] + "\n");
+        int[] unsortArray = new int [str];
+        for (int i = 0; i < unsortArray.length; i++) {
+            System.out.print("Введите элемент массива типа int [" + i + "]:");
+            unsortArray[i] = in.nextInt();
         }
 
+        /*for (int i = 0; i < unsortArray.length; i++) {
+            System.out.print(unsortArray[i] + "\n");
+        }
+        */
 
-        bubbleSort sort = new bubbleSort();
-        sort.rightArray(test_hex);
 
-        for ( int i = 0; i < test_hex.length - 1; i++) {
-            System.out.print(test_hex[i] + "\n");
+        BubbleSort sort = new BubbleSort();
+        sort.rightArray(unsortArray);
+
+        for ( int i = 0; i < unsortArray.length; i++) {
+            System.out.print(unsortArray[i] + "\n");
         }
 
 
