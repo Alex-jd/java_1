@@ -3,6 +3,8 @@ package Alexeenko.Alexandr.BattleShipv1_1;
 /**
  * Created by alex_jd on 06.11.15.
  */
+
+
 public class Water {
     int x, y;
 
