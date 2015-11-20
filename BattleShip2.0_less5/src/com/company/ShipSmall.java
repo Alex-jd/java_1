@@ -19,7 +19,7 @@ public class ShipSmall extends BaseShip {
         int[][] smallArr = new int[lenght][2];
         int temp;
 
-        if (direction == "h" || direction == null) {
+        if (direction == "h") {
             for (int i = 0; i <= (lenght-1) ; i++) {
                 temp = x;
                 for (int ii = 0; ii <= (2 - 1); ii++){
