@@ -1,16 +1,16 @@
 package com.company;
 
 /**
- * Created by alex_jd on 20.11.15.
+ * Created by Alex_JD on 21.11.2015.
  */
-public class ShipSmall extends BaseShip {
+public class ShipBig extends BaseShip {
     static int lenght = 6;
 
-    ShipSmall () {
+    ShipBig () {
 
     }
 
-    ShipSmall (int x, int y, String direction) {
+    ShipBig (int x, int y, String direction) {
         super (x, y, direction);
 
     }
@@ -43,7 +43,7 @@ public class ShipSmall extends BaseShip {
             }
         }
 
-    return smallArr;
+        return smallArr;
     }
 
 }
