@@ -46,9 +46,11 @@ public class Main {
     public static void main(String[] args) {
 	    JFrame myWindow = new JFrame("My First Window");
         //myWindow.setLayout(new FlowLayout());
+        myWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         myWindow.setSize(200,200);
+        //myWindow.setBounds(300,500,500,500);
 
         JPanel panel = new JPanel();
         //panel.setLayout(new FlowLayout());
@@ -59,6 +61,37 @@ public class Main {
         panel.setLayout(layout);
 
         JPanel childPanel = new JPanel();
+        GridBagLayout bagLayout = new GridBagLayout();
+        childPanel.setLayout(bagLayout);
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.gridwidth = 50;
+        constraints.gridheight = 50;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+
+        JButton btn1 = new JButton("1");
+        JButton btn2 = new JButton("1");
+        JButton btn3 = new JButton("1");
+        JButton btn4 = new JButton("1");
+        JButton btn5 = new JButton("1");
+
+        childPanel.add(btn1, constraints);
+        constraints.gridx = 2;
+        constraints.gridy = 2;
+        constraints.gridwidth = 100;
+        constraints.gridheight = 100;
+        childPanel.add(btn2, constraints);
+        childPanel.add(btn3, constraints);
+        childPanel.add(btn4, constraints);
+        childPanel.add(btn5, constraints);
+
+        /*childPanel.add(btn1, BorderLayout.NORTH);
+        childPanel.add(btn2, BorderLayout.CENTER);
+        childPanel.add(btn3, BorderLayout.EAST);
+        childPanel.add(btn4, BorderLayout.NORTH);
+        childPanel.add(btn5, BorderLayout.EAST);*/
+
         panel.add(childPanel);
         /*JButton myBtn = new JButton("Click me!");
         myBtn.addActionListener(listener);
@@ -74,20 +107,11 @@ public class Main {
         panel.add(minusBtn);
         panel.add(myLbl);
 
-        JButton btn1 = new JButton("1");
-        JButton btn2 = new JButton("1");
-        JButton btn3 = new JButton("1");
-        JButton btn4 = new JButton("1");
-        JButton btn5 = new JButton("1");
 
-        childPanel.add(btn1, BorderLayout.NORTH);
-        childPanel.add(btn2, BorderLayout.CENTER);
-        childPanel.add(btn3, BorderLayout.EAST);
-        childPanel.add(btn4, BorderLayout.NORTH);
-        childPanel.add(btn5, BorderLayout.EAST);
 
 
         myWindow.getContentPane().add(panel);
+        myWindow.pack();
         myWindow.setVisible(true);
 
     }
